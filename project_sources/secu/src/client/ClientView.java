@@ -15,6 +15,7 @@ public class ClientView   {
     private JTextField portTextField;
     private JTextField ipTextField;
     private JLabel portLabel ;
+    static JTextField usernameField;
 	public ClientView() {
 		
         frame = new JFrame("Client de Transfere de fichiers");
@@ -49,8 +50,17 @@ public class ClientView   {
         
         
         connectButton = new JButton("Connect to server");        
-        connectButton.setBounds(134, 185, 316, 36);
+        connectButton.setBounds(132, 257, 316, 36);
         frame.getContentPane().add(connectButton); 
+        
+        JLabel lblUsername = new JLabel("username:");
+        lblUsername.setBounds(12, 144, 112, 15);
+        frame.getContentPane().add(lblUsername);
+        
+        usernameField = new JTextField();
+        usernameField.setBounds(12, 171, 316, 36);
+        frame.getContentPane().add(usernameField);
+        usernameField.setColumns(10);
         
         frame.setVisible(true);
 	}
@@ -69,10 +79,4 @@ public class ClientView   {
 	public JTextField getIpTextField() {
 		return ipTextField;
 	}
-	
-	
-	
-	
-	
-	
 }

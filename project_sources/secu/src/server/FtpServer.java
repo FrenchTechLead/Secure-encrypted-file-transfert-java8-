@@ -150,10 +150,10 @@ public class FtpServer implements Runnable {
 			Thread.currentThread().destroy();
 		}
 		
-		JOptionPane.showMessageDialog(null, "Client's certificate has been reveived Correctly : !\n"
-				+ clientCertificate.getIssuerDN()+"\n"
-				+ clientCertificate.getSigAlgName()+"\n", "Success", JOptionPane.INFORMATION_MESSAGE);
-		
+//		JOptionPane.showMessageDialog(null, "Client's certificate has been reveived Correctly : !\n"
+//				+ clientCertificate.getIssuerDN()+"\n"
+//				+ clientCertificate.getSigAlgName()+"\n", "Success", JOptionPane.INFORMATION_MESSAGE);
+//		
 		
 		File workingDirectory = new File(System.getProperty("user.dir"));
 		String userFolder = workingDirectory.getAbsolutePath().concat("/filesInServer/"+clientCertificate.getIssuerDN());

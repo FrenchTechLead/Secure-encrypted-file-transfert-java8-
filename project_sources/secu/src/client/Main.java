@@ -7,7 +7,6 @@ public class Main {
 	
 	public static void main(String [] args){
 		
-		
 		Security.addProvider(new BouncyCastleProvider());
 		
 		ClientModal modal = new ClientModal();

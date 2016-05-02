@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;secu&apos;&#x0A;- Original project: &apos;secu&apos;&#x0A;- Original elements:&#x0A;     CN=FTP Client&#x0A;     CN=toto" description="Delete elements" element1="filesInServer/CN=toto" element2="filesInServer/CN=FTP Client" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1462132560746" subPackages="false" version="1.0"/>
+</session>

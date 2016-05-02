@@ -107,10 +107,10 @@ public class FtpClient{
 			Thread.currentThread().destroy();
 		}
 		
-		JOptionPane.showMessageDialog(null, "Server's certificate has been reveived Correctly : !\n"
-				+ serverCertificate.getIssuerDN()+"\n"
-				+ serverCertificate.getSigAlgName()+"\n", "Success", JOptionPane.INFORMATION_MESSAGE);
-		
+//		JOptionPane.showMessageDialog(null, "Server's certificate has been reveived Correctly : !\n"
+//				+ serverCertificate.getIssuerDN()+"\n"
+//				+ serverCertificate.getSigAlgName()+"\n", "Success", JOptionPane.INFORMATION_MESSAGE);
+//		
 		
 		// Le Client Envoi son certificat 
 		KeyPair clientKeyPair = Security.generateRSAKeyPair();
@@ -118,7 +118,7 @@ public class FtpClient{
 		PublicKey  clientPublicKey = clientKeyPair.getPublic();
 		X509Certificate clientCertificate = null;
 		try {
-			clientCertificate = Security.createCertificate("FTP Client", clientKeyPair);
+			clientCertificate = Security.createCertificate(ClientView.usernameField.getText(), clientKeyPair);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -145,15 +145,6 @@ public class FtpClient{
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e.getStackTrace()[0], e.getMessage(), JOptionPane.ERROR_MESSAGE);
 		}
-    	
-    	
-    	// Test
-    	//available = clientInputStream.readInt();
-    	//byte[] textCrypted = new byte [available];
-    	//clientInputStream.readFully(textCrypted, 0, available);
-    	//byte[] decripted = Security.DesDecrypt(sessionKey, textCrypted);
-    	//ArrayList<String> objet = (ArrayList<String>) Utils.deserialize(decripted);
-    	//System.out.println(objet);
     	
     	UserModal modal = new UserModal(clientInputStream, clientOutPutStream, sessionKey);
     	UserView view = new UserView();
