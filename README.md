@@ -5,11 +5,14 @@ Files are encrypted by DES after starting a session between the server and the c
 # Main classes: 
   - Client: src/client/Main.java
   - Server: src/server/Main.java
+
 # Dependencies:
   - Apache commons-io-2.4.jar
   - Apache commons-lang3-3.4.jar
   - BouncyCastle bcprov-ext-jdk15on-153.jar
-> **Note:** all of theise jars are already included in this repository
+
+**Note:** all of theise jars are already included in this repository
+
 # About: 
 this is a very basic project about security in java in wich we use :
   - Asymetric encryption DES
