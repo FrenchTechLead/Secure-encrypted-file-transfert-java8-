@@ -20,6 +20,6 @@ this is a very basic project about security in java in wich we use :
   - Autosigned Certificates
 
 # Possible improvements:
-  - Implementing a keyStore and a certification autority to store certificates
+  - Implementing a keyStore and a certification authority to store certificates
   - Cutting very large files before sending them to prevent memory overflow exception
   - Showing the transfert progress
